@@ -1,1 +1,30 @@
-/* miniprogram/pages/break/break.wxss */
+page{
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+.container{
+  width: 100%;
+  height: 100%;
+}
+.nav-background{
+  width: 100%;
+  height: 250rpx;
+  position: relative;
+  background-color: #ff6600;
+}
+.nav-select{
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  display: inline-flex;
+}
+.nav-select-left{
+  position: relative;
+  left: 165rpx;
+}
+.nav-select-right{
+  position: relative;
+  left: 325rpx;
+
+}

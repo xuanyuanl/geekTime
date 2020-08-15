@@ -1,5 +1,20 @@
 <!--头部nav-bar-->
-<nav-bar title="极客时间" statusBarColor="#f8f8f8" navBarColor="#f8f8f8" titleColor="#111111"> 
+<nav-bar title="课间" statusBarColor="#ff6600" navBarColor="#ff6600" titleColor="#ffffff"> 
 </nav-bar>
 
-<!--主体-->
+<!--主体-->   <!--滚动猜想，设置statusBarcolor="{{statusBarcolor}}",addEventListenner监听滚动事件，改变这个statusBarColor-->
+<view class="container">
+  <view class="nav-background">
+    <view class="nav-select">
+      <view class="nav-select-left">
+        官方打卡
+      </view>
+      <view class="nav-select-right">
+        精选打卡
+      </view>
+      <view class="nav-selected">
+      </view> 
+    </view> 
+  </view>   
+</view>
+  
