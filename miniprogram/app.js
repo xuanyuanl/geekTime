@@ -1,6 +1,16 @@
 //app.js
 App({
   onLaunch: function () {
+
+    wx.db = {}
+    let info = wx.getSystemInfoSync();
+    wx.db.statusBarHeight = info.statusBarHeight
+
+    if(info.platform === 'android'){
+      wx.db.navBarHeight = 48
+    }else{
+      wx.db.navBarHeight = 44
+    }
     
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')

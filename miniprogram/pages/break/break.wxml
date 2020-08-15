@@ -1,2 +1,5 @@
-<!--miniprogram/pages/break/break.wxml-->
-<text>miniprogram/pages/break/break.wxml</text>
+<!--头部nav-bar-->
+<nav-bar title="极客时间" statusBarColor="#f8f8f8" navBarColor="#f8f8f8" titleColor="#111111"> 
+</nav-bar>
+
+<!--主体-->
