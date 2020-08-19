@@ -1,9 +1,9 @@
 <view class="">
   <view style="height:{{topHeight}}px"></view>
   <view class="container">
-    <view style="{{statusBarStyle}}"></view>  <!--顶部电池背景色-->
-    <view class="nav-bar" style="{{navBarStyle}}">  <!--胶囊背景色-->   
-      <view class="top">  <!--自定义布局-->
+    <view style="{{statusBarStyle}} background-color:{{navBarColor}}"></view>  <!--顶部电池背景色-->
+    <view class="nav-bar" style="{{navBarStyle}} background-color:{{navBarColor}}">  <!--胶囊背景色-->   
+      <view class="top" style="color:{{titleColor}}">  <!--自定义布局-->
         <text>{{title}}</text>
       </view>
     </view>

@@ -1,8 +1,38 @@
-<!--头部nav-bar-->
-<nav-bar title="课间" statusBarColor="#ff6600" navBarColor="#ff6600" titleColor="#ffffff"> 
-</nav-bar>
+<view class="main">
+  <!--没有滚动时显示-->
+  <view class="nav1">
+    <nav-bar title="课间" statusBarColor="{{statusBarColor}}" navBarColor="{{navBarColor}}" titleColor="{{titleColor}}"> 
+    </nav-bar>
+    <view class="container">
+      <view class="nav-background ">
+        <view wx:if="{{isShow}}" class="nav-select">
+          <view class="nav-select-left">
+            官方打卡
+          </view>
+          <view class="nav-select-right">
+            精选打卡
+          </view>
+          <view class="nav-selected">
+          </view> 
+        </view>   
+      </view>
+    </view>
+    <!--滚动时显示
+  <view class="nav2">
+    <nav-bar title="课间" statusBarColor="{{statusBarColor}}" navBarColor="{{navBarColor}}" titleColor="{{titleColor}}"> 
+    </nav-bar>
+  </view>  -->   
+  </view>
+</view>
 
+<!--头部nav-bar-->
+
+<!--
+<nav-bar title="课间" statusBarColor="{{statusBarColor}}" navBarColor="{{navBarColor}}" titleColor="{{titleColor}}"> 
+</nav-bar>
+-->
 <!--主体-->   <!--滚动猜想，设置statusBarcolor="{{statusBarcolor}}",addEventListenner监听滚动事件，改变这个statusBarColor-->
+<!--
 <view class="container">
   <view class="nav1">
     <view class="nav-background "> 
@@ -33,4 +63,4 @@
   </view>
       
 </view>
-  
+  -->

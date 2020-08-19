@@ -5,9 +5,33 @@ Page({
   * 页面的初始数据
   */
  data: {
+  statusBarColor:'#ff6600',
+  navBarColor:'#ff6600',
+  titleColor:'#ffffff',
   isShow:true
  },
 
+ onPageScroll:function(e){
+   const that = this
+   wx.createSelectorQuery().select('.nav-select').boundingClientRect((rect)=>{
+    if(rect.top - e.scrollTop <= -(wx.db.navBarHeight)){
+      console.log(rect.top);
+      that.setData({
+        statusBarColor:'#ffffff',
+        navBarColor:'#ffffff',
+        titleColor:'#000000',
+      })
+      console.log('111111');
+    }else{
+      that.setData({
+        statusBarColor:'#ff6600',
+        navBarColor:'#ff6600',
+        titleColor:'#ffffff',
+      })
+      console.log('222222');
+    }
+   }).exec()
+ },
  /**
   * 生命周期函数--监听页面加载
   */
