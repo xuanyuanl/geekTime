@@ -8,29 +8,57 @@ Page({
   statusBarColor:'#ff6600',
   navBarColor:'#ff6600',
   titleColor:'#ffffff',
-  isShow:true
+  isShow:false,
+  animation:'',
+  isSelected:true
  },
+
 
  onPageScroll:function(e){
    const that = this
    wx.createSelectorQuery().select('.nav-select').boundingClientRect((rect)=>{
-    if(rect.top - e.scrollTop <= -(wx.db.navBarHeight)){
-      console.log(rect.top);
+    if(rect.top - e.scrollTop <= 20){
       that.setData({
         statusBarColor:'#ffffff',
         navBarColor:'#ffffff',
         titleColor:'#000000',
+        isShow:true
       })
-      console.log('111111');
     }else{
       that.setData({
         statusBarColor:'#ff6600',
         navBarColor:'#ff6600',
         titleColor:'#ffffff',
+        isShow:'a'
       })
-      console.log('222222');
     }
    }).exec()
+ },
+
+ selectChange1(){
+  let animation = wx.createAnimation({
+    duration:1000,
+    timingFunction:'ease',
+  })
+  this.animation=animation
+  animation.translateX(148).step();
+  this.setData({
+    animation:animation.export(),
+    isSelected:true
+  })
+ },
+
+ selectChange2(){
+  let animation = wx.createAnimation({
+    duration:1000,
+    timingFunction:'ease',
+  })
+  this.animation=animation
+  animation.translateX(0).step();
+  this.setData({
+    animation:animation.export(),
+    isSelected:false
+  })
  },
  /**
   * 生命周期函数--监听页面加载

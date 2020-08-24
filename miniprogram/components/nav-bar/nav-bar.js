@@ -25,24 +25,16 @@ Component({
   /**
    * 组件的初始数据
    */
-  data: {
-    navBarStyle: "",
-    statusBarStyle: "",
-    topHeight: 0,
-  },
+  observers: {
+    'statusBarColor,navBarColor,titleColor'(sc, nc, tc) {  // canvasUrl: 父组件传递过来的值
 
-
-  lifetimes: {
-    attached: function () {
-      let navBarStyle = `background-color:${this.data.navBarColor};
-    height:${wx.db.navBarHeight}px; color:${this.data.titleColor}`
-      let statusBarStyle = `background-color:${this.data.statusBarColor};
-    height:${wx.db.statusBarHeight}px;`
-
+      let ns = `background-color:${nc};height:${wx.db.navBarHeight}px; color:${tc}`
+      let ss = `background-color:${sc};height:${wx.db.statusBarHeight}px;`
       let topHeight = wx.db.statusBarHeight + wx.db.navBarHeight
+
       this.setData({
-        navBarStyle, //navBarStyle:navBarStyle
-        statusBarStyle,
+        navBarStyle: ns,
+        statusBarStyle: ss,
         topHeight
       })
       wx.setNavigationBarColor({ //设置头部电池时间的字体颜色
@@ -53,6 +45,14 @@ Component({
     },
 
   },
+
+
+  data: {
+  navBarStyle: "",
+  statusBarStyle: "",
+  topHeight: 0,
+  },
+
   /**
    * 组件的方法列表
    */
