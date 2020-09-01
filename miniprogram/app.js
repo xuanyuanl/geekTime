@@ -6,6 +6,7 @@ App({
     let info = wx.getSystemInfoSync();
     wx.db.statusBarHeight = info.statusBarHeight
 
+
     if(info.platform === 'android'){
       wx.db.navBarHeight = 48
     }else{
@@ -21,6 +22,7 @@ App({
         //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
         //   如不填则使用默认环境（第一个创建的环境）
         // env: 'my-env-id',
+        env: 'first-wxdb-uxfm6',
         traceUser: true,
       })
     }

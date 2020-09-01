@@ -5,12 +5,16 @@ Page({
   * 页面的初始数据
   */
  data: {
-  statusBarColor:'#ff6600',
-  navBarColor:'#ff6600',
+  statusBarColor:'#ff903e',
+  navBarColor:'#ff903e',
   titleColor:'#ffffff',
   isShow:false,
   animation:'',
-  isSelected:true
+  isSelected:true,
+  boxBottomNum:2,
+
+  punch:[],
+  selectingPunch:[],
  },
 
 
@@ -26,10 +30,10 @@ Page({
       })
     }else{
       that.setData({
-        statusBarColor:'#ff6600',
-        navBarColor:'#ff6600',
+        statusBarColor:'#ff903e',
+        navBarColor:'#ff903e',
         titleColor:'#ffffff',
-        isShow:'a'
+        isShow:false
       })
     }
    }).exec()
@@ -37,7 +41,7 @@ Page({
 
  selectChange1(){
   let animation = wx.createAnimation({
-    duration:1000,
+    duration:500,
     timingFunction:'ease',
   })
   this.animation=animation
@@ -45,12 +49,13 @@ Page({
   this.setData({
     animation:animation.export(),
     isSelected:true
-  })
+  });
+  this.toGetSelectingPunch()
  },
 
  selectChange2(){
   let animation = wx.createAnimation({
-    duration:1000,
+    duration:500,
     timingFunction:'ease',
   })
   this.animation=animation
@@ -60,11 +65,41 @@ Page({
     isSelected:false
   })
  },
+
+ runOnce(func) {
+  let runOnce = true
+  return function(params) {
+    if (runOnce) {
+      func.apply(this.params)
+      runOnce = false
+    }
+  }
+ },
+ toGetSelectingPunch() {
+   if (this.data.selectingPunch.length > 0) {
+     return
+   }else{
+     this.setData({
+      selectingPunch:[2]//这里取数据库拿数据
+     })
+   }
+ },
  /**
   * 生命周期函数--监听页面加载
   */
  onLoad: function (options) {
-
+  const self = this
+  wx.cloud.callFunction({
+    name:'getPunch',
+    data:{},
+    success(res) {
+      // console.log(res);
+      self.setData({
+        punch:res.result.data
+      })
+      console.log(self.data.punch);
+    }
+  })
  },
 
  /**

@@ -1,7 +1,7 @@
 Page{
   width: 100%;
   height: 100%;
-  background-color: #f8f8f8;
+  background-color: #f3f6f8;
 }
 .container{
   width: 100%;
@@ -11,7 +11,7 @@ Page{
   width: 100%;
   height: 280rpx;
   position: relative;
-  background-color: #ff6600;
+  background-color: #ff903e;
 }
 .nav-select{
   width: 100%;
@@ -21,7 +21,7 @@ Page{
   display: inline-flex;
   margin-top: 60rpx;
   position: relative;
-  z-index: 999;
+
 }
 .nav-select-left{
   position: relative;
@@ -35,7 +35,7 @@ Page{
   position: relative;
 }
 .main{
-  height: 800px;
+  height: 100%;
 }
 .nav-background2{
   position: fixed;
@@ -43,6 +43,7 @@ Page{
   width: 100%;
   height: 140rpx;
   background-color: #fff;
+  z-index: 10;
 }
 .nav-select2{
   width: 100%;
@@ -64,10 +65,16 @@ Page{
   position: relative;
   width: 60rpx;
   height: 4rpx;
-  background-color: #ff6600;
+  background-color: #ff903e;
   top: 60rpx;
   left: -75rpx;
 }
 .color{
-  color: #ff6600;
+  color: #ff903e;
+}
+.body-container{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  margin-top: -150rpx;
 }

@@ -29,5 +29,14 @@
       </view>
     </view>     
   </view>
+
+  <view class="body-container">
+    <!--循环的盒子-->
+    <view wx:for="{{punch}}" wx:key="index">
+      <punch punchName="{{item.punchName}}" ptc="{{item.ptc}}" ptt="{{item.ptt}}" userImg="{{item.userImg}}" userComment="{{item.userComment}}"></punch>
+    </view>
+  </view>
+    
+
 </view>
 
