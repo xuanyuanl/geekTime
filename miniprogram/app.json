@@ -1,10 +1,10 @@
 {
  "pages": [
-  "pages/break/break",
+  "pages/profile/profile",
   "pages/index/index",
   "pages/form/form",
- 
-  "pages/profile/profile"
+  "pages/break/break"
+  
  ],
  "window": {
   "backgroundColor": "#F6F6F6",

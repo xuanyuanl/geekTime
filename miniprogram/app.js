@@ -1,6 +1,9 @@
 //app.js
 App({
   onLaunch: function () {
+    wx.login({
+      
+    })
 
     wx.db = {}
     let info = wx.getSystemInfoSync();

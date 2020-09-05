@@ -37,6 +37,9 @@
     </view>
   </view>
     
+  <view class="launch">
+    <text >发起打卡</text>
+  </view>
 
 </view>
 

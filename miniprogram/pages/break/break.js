@@ -79,9 +79,22 @@ Page({
    if (this.data.selectingPunch.length > 0) {
      return
    }else{
-     this.setData({
-      selectingPunch:[2]//这里取数据库拿数据
-     })
+    //  云函数拿相应的数据
+    const self = this
+    wx.cloud.callFunction({
+      name:'getPunch',
+      data:{
+        type:'elaborate',
+      },
+      success(res) {
+        self.setData({
+          selectingPunch:[2]//res.result.data
+         })
+      },
+      fail(res) {
+        console.log(res);
+      }
+    })    
    }
  },
  /**
@@ -91,13 +104,18 @@ Page({
   const self = this
   wx.cloud.callFunction({
     name:'getPunch',
-    data:{},
+    data:{
+      type:'official',
+    },
     success(res) {
       // console.log(res);
       self.setData({
         punch:res.result.data
       })
       console.log(self.data.punch);
+    },
+    fail(res) {
+      console.log(res);
     }
   })
  },
