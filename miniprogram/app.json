@@ -3,8 +3,8 @@
   "pages/profile/profile",
   "pages/index/index",
   "pages/form/form",
-  "pages/break/break"
-  
+  "pages/break/break",
+  "pages/login/login"
  ],
  "window": {
   "backgroundColor": "#F6F6F6",
@@ -14,35 +14,35 @@
   "navigationStyle": "custom"
  },
  "tabBar": {
-   "color":"#979797",
-   "selectedColor":"#ff6600",
-   "backgroundColor":"#f8f8f8",
+  "color": "#979797",
+  "selectedColor": "#ff6600",
+  "backgroundColor": "#f8f8f8",
   "list": [
-    {
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "/images/index-normal.png",
-      "selectedIconPath": "/images/index-active.png"
-    }, 
-    {
-      "pagePath": "pages/form/form",
-      "text": "讲堂",
-      "iconPath": "/images/form-normal.png",
-      "selectedIconPath": "/images/form-active.png"
-    },
-    {
-      "pagePath": "pages/break/break",
-      "text": "课间",
-      "iconPath": "/images/break-normal.png",
-      "selectedIconPath": "/images/break-active.png"
-    },
-    {
-      "pagePath": "pages/profile/profile",
-      "text": "我的",
-      "iconPath": "/images/profile-normal.png",
-      "selectedIconPath": "/images/profile-active.png"
-    }
-]
-},
+   {
+    "pagePath": "pages/index/index",
+    "text": "首页",
+    "iconPath": "/images/index-normal.png",
+    "selectedIconPath": "/images/index-active.png"
+   },
+   {
+    "pagePath": "pages/form/form",
+    "text": "讲堂",
+    "iconPath": "/images/form-normal.png",
+    "selectedIconPath": "/images/form-active.png"
+   },
+   {
+    "pagePath": "pages/break/break",
+    "text": "课间",
+    "iconPath": "/images/break-normal.png",
+    "selectedIconPath": "/images/break-active.png"
+   },
+   {
+    "pagePath": "pages/profile/profile",
+    "text": "我的",
+    "iconPath": "/images/profile-normal.png",
+    "selectedIconPath": "/images/profile-active.png"
+   }
+  ]
+ },
  "sitemapLocation": "sitemap.json"
 }

@@ -7,7 +7,7 @@ Page({
  data: {
   canIUse: wx.canIUse('button.open-type.getUserInfo'),
   logged:true,
-  logged1:false,
+  logged1:true,
 
   statusBarColor:'#ffffff',
   navBarColor:'#ffffff',
@@ -74,10 +74,20 @@ Page({
   wx.checkSession({
     success: () => { //登录成功了，把login的view结构替换掉
       console.log(123);
-     
+      wx.navigateTo({  
+        url:'../login/login',  //跳转页面的路径，可带参数 ？隔开，不同参数用 & 分隔；相对路径，不需要.wxml后缀
+        success:function(){
+          console.log('789');
+        },        //成功后的回调；
+        fail:()=> {
+          console.log('111');
+        }
+      })
     },
     fail: () => { //第一次登录
+      console.log('456');
       this.onLogin()
+      
     }
   })
  },

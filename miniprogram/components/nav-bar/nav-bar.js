@@ -19,6 +19,10 @@ Component({
     titleColor: {
       type: String,
       value: "#000"
+    },
+    isGoBack: {
+      type:Boolean,
+      value: false
     }
   },
 
@@ -48,6 +52,8 @@ Component({
 
 
   data: {
+  
+
   navBarStyle: "",
   statusBarStyle: "",
   topHeight: 0,
@@ -57,6 +63,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    goBack() {
+      wx.navigateBack({
+        delta: 1
+      })  
+    }
   }
 })

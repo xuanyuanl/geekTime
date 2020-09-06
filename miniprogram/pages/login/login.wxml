@@ -1,0 +1,17 @@
+<view class="main">
+  <view class="nav">
+    <nav-bar 
+    title="登录" 
+    statusBarColor="{{statusBarColor}}" 
+    navBarColor="{{navBarColor}}" 
+    titleColor="{{titleColor}}"
+    isGoBack="true"
+    >
+    </nav-bar> 
+  </view>
+  
+   <button class="ss" open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo" style="background-image: url('../../images/login.png')">
+     ssf
+   </button>
+     
+</view>
